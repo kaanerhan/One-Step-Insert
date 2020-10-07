@@ -1,6 +1,6 @@
 # One-Step-Insert
 
-First,Create tables
+
 
 CREATE TABLE [dbo].[OrderDetails](
 	[Id] [varchar](60) NOT NULL,
