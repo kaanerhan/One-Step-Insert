@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using System.Windows.Forms;
 
 namespace OneStepInsert
 {
@@ -128,9 +127,7 @@ namespace OneStepInsert
             if (value == null)
                 return "NULL";
             else
-            {
                 result = value.ToString().Replace(',', '.');
-            }
             return result;
         }
         public class Order
@@ -180,6 +177,15 @@ namespace OneStepInsert
             public string OrderNumber { get; set; }
             public bool Result { get; set; }
             public string Reason { get; set; }
+        }
+        public static string BoolForDatabase(object value)
+        {
+            string result = "";
+            if (value == null)
+                return "NULL";
+            else
+                result = Convert.ToInt16(value).ToString();
+            return result;
         }
     }
 }
